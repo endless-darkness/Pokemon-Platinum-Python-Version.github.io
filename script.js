@@ -1,9 +1,9 @@
 // Array of background image URLs
 const backgroundImages = [
-    'images/background1.jpg',
-    'images/background2.jpg',
-    'images/background3.jpg',
-    'images/background4.jpg'
+    'images/background1.png',
+    'images/background2.png',
+    'images/background3.png',
+    'images/background4.png'
 ];
 
 // Function to set random background
