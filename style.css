@@ -1,18 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
 
-/* Other existing styles remain unchanged */
-
-header {
-    /* Previous styles */
-    /* Removed styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    /* Other existing styles for body */
 }
 
 h1 {
-    font-family: 'Prompt', sans-serif;
     font-size: 3.5rem;
     letter-spacing: 3px;
     font-weight: 900;
-    text-shadow: 0 0 5px blue, 0 0 10px blue, 0 0 15px blue; /* Layered 3D depth effect */
+    text-shadow: 
+        4px 4px 0px #0066cc,
+        6px 6px 0px #003d7a,
+        3px 3px 10px rgba(0, 0, 0, 0.9);
 }
 
-/* Other existing styles remain unchanged */
+.container {
+    /* Existing styles for container */
+}
+
+.subtitle {
+    /* Existing styles for subtitle */
+}
+
+.main {
+    /* Existing styles for main */
+}
+
+.download-btn {
+    /* Existing glassmorphic effect styles */
+}
+
+footer {
+    /* Existing styles for footer */
+}
+
+/* Existing media queries */
