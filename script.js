@@ -6,6 +6,16 @@ const backgroundImages = [
     'images/background4.png'
 ];
 
+// Function to preload an image
+function preloadImage(url) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(url);
+        img.onerror = () => reject(url);
+        img.src = url;
+    });
+}
+
 // Function to set random background
 function setRandomBackground() {
     const randomIndex = Math.floor(Math.random() * backgroundImages.length);
@@ -13,8 +23,19 @@ function setRandomBackground() {
     const selectedImage = backgroundImages[randomIndex];
     
     if (backgroundElement) {
-        backgroundElement.style.backgroundImage = `url('${selectedImage}')`;
-        console.log('Background set to:', selectedImage);
+        console.log('Attempting to load background:', selectedImage);
+        
+        // Preload the image first
+        preloadImage(selectedImage)
+            .then(() => {
+                backgroundElement.style.backgroundImage = `url('${selectedImage}')`;
+                backgroundElement.style.opacity = '1';
+                console.log('Background successfully loaded:', selectedImage);
+            })
+            .catch(() => {
+                console.error('Failed to load background image:', selectedImage);
+                console.log('Falling back to solid color background');
+            });
     } else {
         console.error('Background element not found');
     }
