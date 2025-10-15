@@ -12,11 +12,21 @@ function setRandomBackground() {
     const backgroundElement = document.getElementById('background');
     const selectedImage = backgroundImages[randomIndex];
     
-    backgroundElement.style.backgroundImage = `url('${selectedImage}')`;
+    if (backgroundElement) {
+        backgroundElement.style.backgroundImage = `url('${selectedImage}')`;
+        console.log('Background set to:', selectedImage);
+    } else {
+        console.error('Background element not found');
+    }
 }
 
-// Set background when page loads
-window.addEventListener('load', setRandomBackground);
+// Set background when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setRandomBackground);
+} else {
+    // DOM is already ready
+    setRandomBackground();
+}
 
 // Optional: Change background every 30 seconds
 // Uncomment the following lines if you want the background to rotate automatically
