@@ -2,8 +2,7 @@
 const backgroundImages = [
     'images/background1.png',
     'images/background2.png',
-    'images/background3.png',
-    'images/background4.png'
+    'images/background3.png'
 ];
 
 // Function to preload an image
