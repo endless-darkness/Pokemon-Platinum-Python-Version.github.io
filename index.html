@@ -2,47 +2,152 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pokemon Platinum Python Version - A text-based, Pokémon adventure coded in Python 3.">
-    <title>Pokémon Platinum Python Version</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Rediscover Sinnoh in Pokémon Platinum Python Version, a fan-made text-based adventure. Download the early access beta for Windows or Linux.">
+    <meta name="theme-color" content="#08090b">
+    <title>Pokémon Platinum — Python Version</title>
+    <link rel="preload" as="image" href="images/scenes/lake-verity-v6.webp" fetchpriority="high">
+    <link rel="stylesheet" href="style.css?v=cinematic-2">
+    <script src="script.js?v=cinematic-2" defer></script>
 </head>
 <body>
-    <!-- Pokeball Overlay -->
-    <div id="pokeballOverlay">
-        <div class="pokeball">
-            <div class="pokeball-button"></div>
-        </div>
-        <p class="click-text">Click to Enter</p>
-    </div>
-    
-    <audio id="bgMusic" loop>
-        <source src="audio/GiratinaRemix.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <div id="background"></div>
-    <div class="container" style="display: none;">
-        <header>
-            <h1>Pokémon Platinum Python Version</h1>
-            <p class="subtitle">A text-based Pokémon adventure coded in Python 3.</p>
-        </header>
-        
-        <main>
+    <a class="skip-link" href="#downloads">Skip to downloads</a>
+    <header class="site-nav">
+        <a class="wordmark" href="#journey" aria-label="Pokémon Platinum Python Version, home">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13"/><path d="M3 16h9m8 0h9"/><circle cx="16" cy="16" r="4"/></svg>
+            <span>PLATINUM<small>PYTHON VERSION</small></span>
+        </a>
+        <nav aria-label="Main navigation">
+            <a class="nav-download" href="#downloads">Download <span aria-hidden="true">↗</span></a>
+        </nav>
+        <div class="scroll-progress" aria-hidden="true"></div>
+    </header>
+
+    <nav class="chapter-nav" aria-label="Scene navigation">
+        <a href="#journey" data-chapter-link aria-label="Scene 1: A new beginning" aria-current="location"><span>01</span></a>
+        <a href="#bloom" data-chapter-link aria-label="Scene 2: A little wonder"><span>02</span></a>
+        <a href="#shadow" data-chapter-link aria-label="Scene 3: Into the unknown"><span>03</span></a>
+        <a href="#summit" data-chapter-link aria-label="Scene 4: Where legends meet"><span>04</span></a>
+        <a href="#tournament" data-chapter-link aria-label="Scene 5: The world is watching"><span>05</span></a>
+    </nav>
+
+    <main>
+        <section id="journey" class="scene scene-hero" data-hero aria-labelledby="hero-title">
+            <div class="scene-stage">
+                <img class="scene-image" src="images/scenes/lake-verity-v6.webp" width="1542" height="1020" fetchpriority="high" alt="Lucas and Barry approach a sunlit forest lake beneath distant mountain peaks.">
+                <div class="scene-shade"></div>
+                <div class="scene-copy hero-copy">
+                    <p class="eyebrow"><span class="status-dot"></span> A FAN-MADE ADVENTURE</p>
+                    <h1 id="hero-title">Pokémon Platinum<br><span>Python Version.</span></h1>
+                    <p class="hero-description">A familiar world. A new way to play.<br>A text-based adventure, reimagined in the terminal.</p>
+                    <a class="text-link" href="#about">Rediscover Sinnoh <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="scene-bottom">
+                    <a class="scroll-cue" href="#about"><span class="scroll-line" aria-hidden="true"></span> SCROLL TO EXPLORE</a>
+                    <p>01 / A NEW BEGINNING <span>Illustrative artwork</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="intro section-pad" aria-labelledby="intro-title">
+            <div class="reveal">
+                <p class="eyebrow accent">THE FEELING NEVER LEFT.</p>
+                <h2 id="intro-title">Some stories<br><span class="muted">stay with you.</span></h2>
+                <p class="section-description">The first step into tall grass. The call to adventure. Saving the world from Team Galactic.</p>
+                <p class="intro-note">Return to the spirit of Sinnoh in a fan-made, text-based Pokémon adventure built in Python.</p>
+            </div>
+            <div class="intro-meta" aria-label="Game details"><span>INSPIRED BY SINNOH</span><span>BUILT IN PYTHON 3</span><span>MADE FOR THE ADVENTURE</span></div>
+        </section>
+
+        <section id="bloom" class="scene scene-bloom" aria-labelledby="bloom-title">
+            <div class="scene-stage">
+                <img class="scene-image" src="images/scenes/flower-paradise.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Shaymin rests in a field of pink flowers overlooking a lake and sunlit mountain peaks.">
+                <div class="scene-shade"></div>
+                <div class="scene-copy">
+                    <p class="eyebrow">02 / A LITTLE WONDER</p>
+                    <h2 id="bloom-title">National Dex with tons of Pokémon to discover.</h2>
+                    <p>Four seasons.<br>Multiple generations of Pokémon to encounter.</p>
+                </div>
+                <div class="scene-bottom"><p class="scene-subject">SHAYMIN <span>A moment in bloom</span></p><p class="art-label">ILLUSTRATIVE ARTWORK</p></div>
+            </div>
+        </section>
+
+        <section id="shadow" class="scene scene-shadow" aria-labelledby="shadow-title">
+            <div class="scene-stage">
+                <img class="scene-image" src="images/scenes/newmoon-island.webp" width="1452" height="1083" loading="lazy" decoding="async" alt="Darkrai hovers above a moonlit pool surrounded by rocky cliffs and dark evergreens.">
+                <div class="scene-shade"></div>
+                <div class="scene-copy">
+                    <p class="eyebrow">03 / INTO THE UNKNOWN</p>
+                    <h2 id="shadow-title">Not every legend<br>lives in the light.</h2>
+                    <p>Confront the mysteries of the Sinnoh region.</p>
+                </div>
+                <div class="scene-bottom"><p class="scene-subject">DARKRAI <span>On the edge of a dream</span></p><p class="art-label">ILLUSTRATIVE ARTWORK</p></div>
+            </div>
+        </section>
+
+        <section id="summit" class="scene scene-summit" aria-labelledby="summit-title">
+            <div class="scene-stage">
+                <img class="scene-image" src="images/scenes/spear-pillar-v4.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Dawn and Infernape face Cyrus, Dialga, and Palkia among the stormy ruins of Spear Pillar.">
+                <div class="scene-shade"></div>
+                <div class="scene-copy">
+                    <p class="eyebrow">04 / WHERE LEGENDS MEET</p>
+                    <h2 id="summit-title">Something<br>greater awaits.</h2>
+                    <p>A world worth returning to.<br>An adventure worth making your own.</p>
+                    <a class="text-link" href="#tournament">Step into the spotlight <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="scene-bottom"><p class="scene-subject">SPEAR PILLAR <span>At the edge of fate</span></p><p class="art-label">ILLUSTRATIVE ARTWORK</p></div>
+            </div>
+        </section>
+
+        <section id="tournament" class="scene scene-tournament" aria-labelledby="tournament-title">
+            <div class="scene-stage">
+                <img class="scene-image" src="images/scenes/world-tournament.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Red and Lucas face each other in a packed Pokémon World Tournament arena, beneath a screen displaying their matchup.">
+                <div class="scene-shade"></div>
+                <div class="scene-copy">
+                    <p class="eyebrow">05 / THE WORLD IS WATCHING</p>
+                    <h2 id="tournament-title">Every battle.<br>A new story.</h2>
+                    <p>Challenge legendary trainers from around the world.<br>Do you have what it takes?</p>
+                    <a class="text-link" href="#downloads">Your journey starts here <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="scene-bottom"><p class="scene-subject">POKÉMON WORLD TOURNAMENT <span>Step into the spotlight</span></p><p class="art-label">ILLUSTRATIVE ARTWORK</p></div>
+            </div>
+        </section>
+
+        <section id="downloads" class="downloads section-pad" aria-labelledby="download-title">
+            <div class="download-heading reveal">
+                <p class="eyebrow accent">POKÉMON PLATINUM · PYTHON VERSION</p>
+                <h2 id="download-title">Your next adventure.<br><span class="muted">Starts here.</span></h2>
+                <p class="section-description">Choose your platform and step into a text-based Pokémon adventure.</p>
+            </div>
+            <aside class="beta-banner" aria-label="Early access beta notice">
+                <span class="beta-label"><span class="status-dot"></span> EARLY ACCESS BETA</span>
+                <p>This game is still in development and is not the final product. You may encounter bugs or glitches.</p>
+            </aside>
             <div class="button-container">
-                <a href="https://github.com/sudoplunder/Pokemon-Platinum-Python-Version" 
-                   class="download-btn" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    Download
+                <a href="downloads/PokemonPythonPlatinum.exe" class="download-btn" download>
+                    <svg class="platform-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M1 3.5 10.5 2.2v9.1H1zm11-1.6L23 .4v10.9H12zM1 12.7h9.5v9.1L1 20.5zm11 0h11v10.9l-11-1.5z"/></svg>
+                    <span><small>DOWNLOAD FOR</small>Windows</span><span class="download-arrow" aria-hidden="true">↓</span>
+                </a>
+                <a href="downloads/PokemonPythonPlatinum.elf" class="download-btn" download>
+                    <svg class="platform-logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                        <path fill="#202124" d="M14 19c-1-5 0-15 10-15s11 10 10 15c4 5 9 13 7 17-2 3-6 0-8-2H15c-2 2-6 5-8 2-2-4 3-12 7-17Z"/>
+                        <ellipse cx="24" cy="29" rx="13" ry="15" fill="#202124"/><ellipse cx="24" cy="30" rx="10" ry="12" fill="#fff"/>
+                        <ellipse cx="20" cy="14" rx="4" ry="5" fill="#fff"/><ellipse cx="28" cy="14" rx="4" ry="5" fill="#fff"/>
+                        <ellipse cx="21" cy="15" rx="1.6" ry="2.4" fill="#202124"/><ellipse cx="27" cy="15" rx="1.6" ry="2.4" fill="#202124"/>
+                        <path fill="#ffc83d" stroke="#d99916" stroke-linejoin="round" d="m17 20 7-4 7 4-7 5zM15 36c-3-2-5 1-6 4l-5 3c-1 3 11 3 17 0ZM33 36c3-2 5 1 6 4l5 3c1 3-11 3-17 0Z"/>
+                    </svg>
+                    <span><small>DOWNLOAD FOR</small>Linux</span><span class="download-arrow" aria-hidden="true">↓</span>
                 </a>
             </div>
-        </main>
-        
-        <footer>
-            <p>This is a fan-made project and is not affiliated with Nintendo, Game Freak, or The Pokémon Company.</p>
-        </footer>
-    </div>
-    
-    <script src="script.js"></script>
+            <p class="download-note">Windows .exe <span aria-hidden="true">/</span> Linux .elf</p>
+            <p class="art-note">The scenes above are illustrative artwork. The game is a text-based experience.</p>
+        </section>
+    </main>
+
+    <footer>
+        <a class="footer-brand" href="#journey">PLATINUM <span>PYTHON VERSION</span></a>
+        <p>A fan-made project. Not affiliated with Nintendo, Game Freak, or The Pokémon Company.</p>
+        <a href="#journey" class="back-top">Back to top ↑</a>
+    </footer>
 </body>
 </html>
