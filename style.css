@@ -25,6 +25,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .wordmark svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.5; }
 .wordmark small { display: block; color: #d5d3dd; font-size: 8px; letter-spacing: .23em; font-weight: 500; }
 .site-nav nav { display: flex; align-items: center; gap: clamp(1rem, 2.7vw, 2.75rem); font-size: 12px; font-weight: 500; }
+.nav-discord { width: 44px; height: 44px; flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #ffffff40; border-radius: 50%; background: #ffffff0a; color: #e0d9ff; transition: background .2s, border-color .2s, color .2s; }
+.nav-discord svg { width: 22px; height: 22px; }
+.nav-discord:hover { background: #5865f2; border-color: #5865f2; color: #fff; }
 .nav-download { border: 1px solid #ffffff60; border-radius: 100px; padding: 11px 19px; display: flex; align-items: center; gap: 18px; transition: background .2s, color .2s; }
 .nav-download:hover { background: white; color: #111; }
 .scroll-progress { position: absolute; bottom: -1px; left: 0; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; }
